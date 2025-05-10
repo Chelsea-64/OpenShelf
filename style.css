@@ -1,4 +1,4 @@
-/* ======= Global Styles ======= */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,172 +7,162 @@
 
 body {
   font-family: "Inter", sans-serif;
+  color: #3a2f1c;
 }
 
 h1,
 h2,
 h3,
-nav div p {
+.logo {
   font-family: "Playfair Display", serif;
 }
 
-/* ======= Hero Section ======= */
-.hero-section {
-  background: linear-gradient(to right, #c4a06a, #fff1d9); /* Beige gradient */
-  border-bottom: 1px solid black;
-}
-
-/* ======= Navbar ======= */
-nav {
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 30px;
+  padding: 25px 5%;
 }
 
-nav div p {
-  font-size: 40px;
-  font-weight: bold;
+.logo {
+  font-size: 36px;
   font-style: italic;
+  font-weight: bold;
 }
 
-/* ======= Navbar Links ======= */
-.links {
+.nav-links {
   display: flex;
+  gap: 30px;
   align-items: center;
-  gap: 50px;
 }
 
-.links a {
+.nav-links a {
   text-decoration: none;
   color: black;
-  transition: all 0.3s ease-in-out;
+  font-weight: 500;
   position: relative;
 }
 
-/* Hover underline animation for links */
-.links a::after {
+.nav-links a::after {
   content: "";
   position: absolute;
-  width: 0%;
   height: 2px;
   background: black;
-  bottom: -3px;
+  width: 0;
   left: 0;
-  transition: 0.3s;
+  bottom: -3px;
+  transition: width 0.3s ease;
 }
 
-.links a:hover::after {
+.nav-links a:hover::after {
   width: 100%;
 }
 
-/* ======= Buttons ======= */
-button {
-  padding: 10px 25px;
-  background-color: black;
+.signup-btn {
+  padding: 10px 20px;
+  background: black;
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
   font-weight: 600;
 }
 
-button:hover {
-  background-color: white;
-  color: black;
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #c4a06a, #fff1d9);
+  padding-bottom: 40px;
+  border-bottom: 1px solid #aaa;
 }
 
-/* ======= Main (Hero Content) ======= */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.hero-content {
+  text-align: center;
+  margin-top: 40px;
 }
 
-main input {
-  width: 60%;
-  height: 40px;
-  border: none;
+.hero-content input {
+  padding: 12px 20px;
   border-radius: 10px;
-  margin-top: 40px;
-  padding: 0 15px;
-  font-size: 15px;
-  background-color: #fff8ed;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 60%;
+  background: #fff8ed;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
-main input::placeholder {
-  color: grey;
+.hero-content h1 {
+  font-size: 42px;
+  margin: 20px 0;
 }
 
-main h1 {
-  font-size: 45px;
-  text-align: center;
-  margin: 30px 0;
-  color: #3a2f1c;
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
-main p {
-  font-size: 20px;
-  text-align: center;
-  color: #4a3e2a;
+.browse-btn {
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-main button {
-  margin: 40px;
-  padding: 15px 30px;
+/* Explore Button */
+.explore-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
 }
 
-/* ======= Content Section ======= */
-.content {
-  border-bottom: 3px solid gray;
+.explore-btn {
+  padding: 14px 60px;
+  font-size: 18px;
+  font-weight: 700;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
 }
 
-.content div {
+/* Carousel */
+.carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
-}
-
-.content button {
-  padding: 15px 80px;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-/* ======= Carousel Section ======= */
-.carousel-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 80px 0;
-  min-height: 100vh;
+  gap: 40px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
 }
 
 .card {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 20px;
-  background-color: #f5deb3; /* Beige tone */
+  width: 280px;
+  height: 420px;
+  background-color: #f5deb3;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  width: 350px;
-  height: 480px;
-  transition: transform 0.5s ease, opacity 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 10px rgba(41, 40, 40, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .card-center {
@@ -185,103 +175,78 @@ main button {
   right: 60.5%;
   transform: scale(0.85) rotate(-5deg);
   z-index: 1;
-  background-color: #fff1d9;
+  /* background-color: #fff1d9; */
 }
 
 .card-right {
   left: 60.5%;
   transform: scale(0.85) rotate(5deg);
   z-index: 1;
+  /* background-color: #fff1d9; */
+}
+
+/* Different card shades */
+.card-left,
+.card-right {
   background-color: #fff1d9;
 }
 
-.card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Popular Reads */
+.popular {
+  padding: 50px 5%;
+  background: #fdf8f3;
 }
 
-.card img {
-  width: 250px;
-  height: 350px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 16px;
-  font-weight: bold;
-  color: #3a2f1c;
-  margin: 0;
-}
-
-/* ======= Popular Read Section ======= */
-.others {
-  padding: 40px 10%;
-}
-
-.others p {
-  font-size: 32px;
-  font-weight: bold;
-  text-align: left;
+.popular h2 {
+  font-size: 30px;
   margin-bottom: 30px;
-  color: #3a2f1c;
 }
 
-.boxes {
+.popular-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 50px;
 }
 
-.box {
-  height: 220px;
+.popular-box {
+  width: 80%;
+  height: 350px;
   border-radius: 16px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
   font-weight: 600;
-  text-align: center;
+  font-size: 18px;
+  background: #f5deb3;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.box:hover {
+.popular-box:nth-child(2),
+.popular-box:nth-child(3) {
+  background: #fff1d9;
+}
+
+.popular-box:hover {
   transform: scale(1.05);
 }
 
-.box1,
-.box4 {
-  background-color: #f5deb3;
-}
-
-.box2,
-.box3 {
-  background-color: #fff1d9;
-}
-
-/* ======= Responsive Design ======= */
+/* Responsive */
 @media (max-width: 768px) {
-  .boxes {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content input {
+    width: 85%;
+  }
+
+  .carousel {
+    flex-direction: column;
+  }
+
+  .popular-grid {
     grid-template-columns: 1fr;
-  }
-
-  .carousel-container {
-    flex-direction: column;
-    gap: 20px;
-    min-height: auto;
-  }
-
-  .card {
-    position: static;
-    width: 80%;
-    margin: 10px auto;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 15px;
   }
 }

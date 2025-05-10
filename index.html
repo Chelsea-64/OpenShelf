@@ -11,83 +11,62 @@
     />
   </head>
   <body>
-    <!-- Hero Section with Navigation and Search -->
-    <div class="hero-section">
-      <nav>
-        <div>
-          <p>OpenShelf</p>
-        </div>
-        <div class="links">
+    <!-- Hero Section -->
+    <section class="hero">
+      <nav class="navbar">
+        <div class="logo">OpenShelf</div>
+        <div class="nav-links">
           <a href="#">Browse</a>
           <a href="#">Upload</a>
           <a href="#">My Books</a>
-          <button>Sign Up</button>
+          <button class="signup-btn">Sign Up</button>
         </div>
       </nav>
 
-      <main>
-        <!-- Search Input -->
+      <div class="hero-content">
         <input type="search" placeholder="Search books, authors, topics..." />
-
-        <!-- Hero Headline -->
         <h1>
           Get Access To A World Of Free <br />
           Books
         </h1>
-
-        <!-- Hero Subtext -->
         <p>
-          Browse and read a wide range of textbooks and <br />
-          educational materials for free!
+          Browse and read a wide range of textbooks and educational materials
+          for free!
         </p>
+        <button class="browse-btn">Browse Books</button>
+      </div>
+    </section>
 
-        <button>Browse Books</button>
-      </main>
+    <!-- Explore Button -->
+    <div class="explore-wrapper">
+      <button class="explore-btn">Explore</button>
     </div>
 
-    <!-- Content Section with Carousel -->
-    <div class="content">
-      <div>
-        <button>Explore</button>
+    <!-- Carousel Section -->
+    <section class="carousel">
+      <div class="card card-left">
+        <img src="images/1.jpg" alt="Book 1" />
+        <p>The Great Gatsby</p>
       </div>
-
-      <div class="carousel-container">
-        <!-- Left Card -->
-        <div class="card card-left">
-          <div class="card-content">
-            <img src="images/1.jpg" alt="The Great Gatsby" />
-            <p>The Great Gatsby</p>
-          </div>
-        </div>
-
-        <!-- Center Card -->
-        <div class="card card-center">
-          <div class="card-content">
-            <img src="images/2.png" alt="Thinking, Fast and Slow" />
-            <p>Thinking, Fast and Slow</p>
-          </div>
-        </div>
-
-        <!-- Right Card -->
-        <div class="card card-right">
-          <div class="card-content">
-            <img src="images/3.jpeg" alt="Atomic Habits" />
-            <p>Atomic Habits</p>
-          </div>
-        </div>
+      <div class="card card-center">
+        <img src="images/2.png" alt="Book 2" />
+        <p>Thinking, Fast and Slow</p>
       </div>
-      
-
-    <!-- Popular Read Section -->
-    <div class="others">
-      <p>Popular Reads</p>
-
-      <div class="boxes">
-        <div class="box box1"></div>
-        <div class="box box2"></div>
-        <div class="box box3"></div>
-        <div class="box box4"></div>
+      <div class="card card-right">
+        <img src="images/3.jpeg" alt="Book 3" />
+        <p>Atomic Habits</p>
       </div>
-    </div>
+    </section>
+
+    <!-- Popular Reads -->
+    <section class="popular">
+      <h2>Popular Reads</h2>
+      <div class="popular-grid">
+        <div class="popular-box box1">Book A</div>
+        <div class="popular-box box2">Book B</div>
+        <div class="popular-box box3">Book C</div>
+        <div class="popular-box box4">Book D</div>
+      </div>
+    </section>
   </body>
 </html>
